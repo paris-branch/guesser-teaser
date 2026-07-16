@@ -8,30 +8,40 @@ const riddlesData = [
         number: 1,
         date: '2026-07-12',
         answers: ["The Compleat Gardener"],
+        program: 'Friday',
+        position: 5,
         revealed: false
     },
     {
         number: 2,
         date: '2026-07-27',
         answers: ["Mairi's Wedding"],
+        program: 'Saturday',
+        position: 16,
         revealed: false
     },
     {
         number: 3,
         date: '2026-08-03',
         answers: ["One Set Short of a Hundred"],
+        program: 'Saturday',
+        position: 14,
         revealed: false
     },
     {
         number: 4,
         date: '2026-08-10',
         answers: ["The Duke and Duchess of Edinburgh"],
+        program: 'Friday',
+        position: 14,
         revealed: false
     },
     {
         number: 5,
         date: '2026-08-17',
         answers: ["General Stuart's Reel"],
+        program: 'Friday',
+        position: 7,
         revealed: false
     },
     {

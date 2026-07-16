@@ -443,9 +443,14 @@ class RiddleTeaser {
         // Add new feedback message
         const feedback = document.createElement('div');
         feedback.className = `feedback-message ${isCorrect ? 'success' : 'error'}`;
-        feedback.textContent = isCorrect 
-            ? '🎉 Correct! Well done!' 
-            : '❌ Not quite right. Try again!';
+
+        if (isCorrect) {
+            const { program, position } = this.currentRiddle;
+            const suffix = position === 1 ? 'st' : position === 2 ? 'nd' : position === 3 ? 'rd' : 'th';
+            feedback.textContent = `🎉 Correct! Find this dance ${position}${suffix} on the ${program} program!`;
+        } else {
+            feedback.textContent = '❌ Not quite right. Try again!';
+        }
         
         this.riddleDisplay.querySelector('.riddle-content').appendChild(feedback);
 
