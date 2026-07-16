@@ -1,0 +1,575 @@
+// ==========================================
+// COLOR VARIABLES (extracted from banner.png)
+// ==========================================
+// Banner gradient colors:
+$banner-blue: #4a8ec4;        // Top blue
+$banner-purple: #6e7db8;      // Mid-blue/purple
+$banner-mauve: #9c6ba8;       // Purple
+$banner-coral: #c85b87;       // Pink-coral
+$banner-red: #e55853;         // Coral-red
+$banner-orange: #f2543e;      // Bright orange-red
+
+// Main color scheme:
+$bg-dark-blue: #0d1b2e;       // Darker than banner for background
+$primary-blue: #4a8ec4;       // From banner top
+$accent-blue: #6e7db8;        // From banner mid
+$light-blue: #9c6ba8;         // From banner purple section
+$coral-accent: #c85b87;       // From banner coral section
+$white: #ffffff;
+$light-grey: #a8b5c8;
+$circle-white: rgba(255, 255, 255, 0.8);
+$circle-grey: rgba(168, 181, 200, 0.3);
+$hover-white: rgba(255, 255, 255, 0.95);
+$success-green: #4ade80;
+$error-red: #f2543e;          // Using banner orange-red
+
+// ==========================================
+// RESET & BASE STYLES
+// ==========================================
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $bg-dark-blue;
+    color: $white;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+// ==========================================
+// BANNER SECTION
+// ==========================================
+.banner {
+    margin-bottom: 60px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+}
+
+// ==========================================
+// BUBBLES SECTION
+// ==========================================
+.bubbles-container {
+    margin-bottom: 80px;
+}
+
+.bubbles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bubble {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &-circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-content {
+        position: relative;
+        z-index: 2;
+        transition: opacity 0.3s ease;
+    }
+
+    &-date {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        text-align: center;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    // Past riddles (clickable)
+    &.past {
+        .bubble-circle {
+            border: 3px solid $circle-white;
+            background-color: transparent;
+            color: $white;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+
+            .bubble-circle {
+                background-color: $hover-white;
+                color: $bg-dark-blue;
+            }
+
+            .bubble-content {
+                opacity: 0;
+            }
+
+            .bubble-date {
+                opacity: 1;
+                color: $bg-dark-blue;
+            }
+        }
+
+        // Currently active/selected bubble with gradient
+        &.active {
+            .bubble-circle {
+                background: linear-gradient(135deg, $banner-blue 0%, $banner-purple 25%, $banner-mauve 50%, $banner-coral 75%, $banner-red 100%);
+                border-color: $white;
+                color: $white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            &:hover {
+                .bubble-circle {
+                    background: linear-gradient(135deg, $banner-blue 0%, $banner-purple 25%, $banner-mauve 50%, $banner-coral 75%, $banner-red 100%);
+                    color: $white;
+                }
+
+                .bubble-content {
+                    opacity: 1;
+                }
+
+                .bubble-date {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    // Solved riddles (green)
+    &.solved {
+        .bubble-circle {
+            border-color: $success-green;
+            background-color: rgba($success-green, 0.1);
+            color: $success-green;
+            box-shadow: 0 0 8px rgba($success-green, 0.3);
+        }
+
+        .bubble-content {
+            opacity: 1;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+
+            .bubble-circle {
+                background-color: $success-green;
+                color: $white;
+            }
+
+            .bubble-content {
+                opacity: 0;
+            }
+
+            .bubble-date {
+                opacity: 1;
+                color: $white;
+            }
+        }
+
+        &.active {
+            .bubble-circle {
+                background: linear-gradient(135deg, $banner-blue 0%, $banner-purple 25%, $banner-mauve 50%, $banner-coral 75%, $banner-red 100%);
+                border-color: $white;
+                color: $white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            &:hover {
+                .bubble-circle {
+                    background: linear-gradient(135deg, $banner-blue 0%, $banner-purple 25%, $banner-mauve 50%, $banner-coral 75%, $banner-red 100%);
+                }
+
+                .bubble-content {
+                    opacity: 1;
+                }
+
+                .bubble-date {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    // Future riddles (inactive)
+    &.future {
+        cursor: default;
+
+        .bubble-circle {
+            border: 2px solid $circle-grey;
+            background-color: transparent;
+            color: $light-grey;
+        }
+
+        .bubble-content {
+            opacity: 0;
+        }
+
+        .bubble-date {
+            opacity: 1;
+            color: $light-grey;
+            font-size: 12px;
+        }
+    }
+}
+
+// ==========================================
+// RIDDLE DISPLAY SECTION
+// ==========================================
+.riddle-section {
+    width: 100%;
+    max-width: min(90%, 1100px);
+    margin: 0 auto;
+}
+
+.answer-input-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+
+    .input-wrapper {
+        flex: 1;
+        min-width: 200px;
+        position: relative;
+    }
+
+    .answer-input {
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 18px;
+        border: 2px solid $accent-blue;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.05);
+        color: $white;
+        outline: none;
+        transition: all 0.3s ease;
+
+        &::placeholder {
+            color: $light-grey;
+        }
+
+        &:focus {
+            border-color: $light-blue;
+            background-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(74, 123, 167, 0.2);
+        }
+
+        &.correct {
+            border-color: $success-green;
+            background-color: rgba(74, 222, 128, 0.1);
+        }
+
+        &.incorrect {
+            border-color: $error-red;
+            background-color: rgba(248, 113, 113, 0.1);
+        }
+    }
+
+    .check-button {
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: $accent-blue;
+        color: $white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+
+        &:hover {
+            background-color: $light-blue;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 123, 167, 0.4);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        &:disabled {
+            background-color: $light-grey;
+            cursor: not-allowed;
+            transform: none;
+        }
+    }
+}
+
+// Autocomplete dropdown
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: rgba(30, 58, 95, 0.95);
+    border: 2px solid $accent-blue;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    .autocomplete-item {
+        padding: 12px 20px;
+        cursor: pointer;
+        color: $white;
+        transition: background-color 0.2s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover,
+        &.selected {
+            background-color: $accent-blue;
+        }
+
+        .match {
+            font-weight: bold;
+            color: $coral-accent;
+        }
+    }
+}
+
+.riddle-display {
+    background-color: rgba(30, 58, 95, 0.3);
+    border: 2px solid $accent-blue;
+    border-radius: 12px;
+    padding: 40px;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    .riddle-placeholder {
+        color: $light-grey;
+        font-size: 20px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .riddle-content {
+        width: 100%;
+
+        h2 {
+            color: $white;
+            font-size: 28px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .riddle-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: $white;
+            text-align: center;
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin: 10px 0;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 4px 20px;
+            max-width: 400px;
+            margin: 10px auto 0;
+
+            b {
+                text-align: right;
+                font-weight: bold;
+                justify-self: end;
+            }
+
+            span {
+                text-align: left;
+            }
+        }
+
+        .riddle-hint {
+            font-size: 16px;
+            color: $light-grey;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    .feedback-message {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+
+        &.success {
+            color: $success-green;
+            background-color: rgba(74, 222, 128, 0.1);
+            border: 2px solid $success-green;
+        }
+
+        &.error {
+            color: $error-red;
+            background-color: rgba(248, 113, 113, 0.1);
+            border: 2px solid $error-red;
+        }
+    }
+}
+
+// ==========================================
+// RESPONSIVE DESIGN
+// ==========================================
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .banner {
+        margin-bottom: 40px;
+    }
+
+    .bubbles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .bubble {
+        width: 80px;
+        height: 80px;
+
+        &-circle {
+            font-size: 24px;
+        }
+
+        &-date {
+            font-size: 11px;
+        }
+
+        &.future .bubble-date {
+            font-size: 10px;
+        }
+    }
+
+    .riddle-display {
+        padding: 25px;
+        min-height: 250px;
+
+        .riddle-content {
+            h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .riddle-text {
+                font-size: 18px;
+            }
+
+            .riddle-hint {
+                font-size: 14px;
+            }
+        }
+
+        .riddle-placeholder {
+            font-size: 18px;
+        }
+    }
+
+    .answer-input-container {
+        .answer-input {
+            font-size: 16px;
+            padding: 12px 15px;
+        }
+
+        .check-button {
+            font-size: 16px;
+            padding: 12px 30px;
+            width: 100%;
+        }
+    }
+
+    .feedback-message {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bubbles-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .bubble {
+        width: 70px;
+        height: 70px;
+
+        &-circle {
+            font-size: 20px;
+        }
+    }
+}
