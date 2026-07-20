@@ -15,6 +15,14 @@ body {
   margin: 0 auto;
   padding: 20px; }
 
+.game-description {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .banner {
   margin-bottom: 60px;
   text-align: center; }
@@ -278,18 +286,10 @@ body {
         inset: 0;
         pointer-events: none;
         overflow: hidden; }
-    .mistake-dot {
+    .mistake-zone {
         position: absolute;
-        border-radius: 50%;
         background: rgba(144, 238, 144, 0.35);
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        width: 28px;
-        height: 28px;
-        animation: dot-fade-in 0.2s ease-out; }
-    @keyframes dot-fade-in {
-        from { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
-        to   { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+        pointer-events: none; }
       .riddle-display .riddle-content .riddle-text p {
         text-align: center;
         margin-bottom: 10px; }

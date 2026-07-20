@@ -6,7 +6,7 @@
 const riddlesData = [
     {
         number: 1,
-        date: '2026-07-12',
+        date: '2026-07-20',
         answers: ["The Compleat Gardener"],
         program: 'Friday',
         position: 5,

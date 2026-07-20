@@ -13,7 +13,7 @@ class RiddleTeaser {
         this.selectedIndex = -1;
         this.riddleContent = this.loadRiddleContent();
         this.solvedRiddles = this.loadSolvedRiddles();
-        
+
         this.init();
     }
 
@@ -35,16 +35,16 @@ class RiddleTeaser {
         // Load riddle text from HTML
         const riddleElements = document.querySelectorAll('.riddle-data');
         const content = {};
-        
+
         riddleElements.forEach(el => {
             const number = parseInt(el.dataset.number);
             const title = el.querySelector('h2')?.innerHTML || `Riddle #${number}`;
             const text = el.querySelector('.riddle-text')?.innerHTML || '';
             const hint = el.querySelector('.riddle-hint')?.innerHTML || '';
-            
+
             content[number] = { title, text, hint };
         });
-        
+
         return content;
     }
 
@@ -60,10 +60,10 @@ class RiddleTeaser {
         // Check for ?riddle=N parameter
         const urlParams = new URLSearchParams(window.location.search);
         const riddleNumber = parseInt(urlParams.get('riddle'));
-        
+
         if (riddleNumber && riddleNumber >= 1 && riddleNumber <= 12) {
             const riddle = this.riddlesData.find(r => r.number === riddleNumber);
-            
+
             // Only select if the riddle is revealed
             if (riddle && riddle.revealed) {
                 const bubble = document.querySelector(`.bubble[data-number="${riddleNumber}"]`);
@@ -73,7 +73,7 @@ class RiddleTeaser {
                 }
             }
         }
-        
+
         return false;
     }
 
@@ -96,14 +96,14 @@ class RiddleTeaser {
         this.riddlesData.forEach(riddle => {
             const riddleDate = new Date(riddle.date);
             riddleDate.setHours(0, 0, 0, 0);
-            
+
             riddle.revealed = riddleDate <= today;
         });
     }
 
     renderBubbles() {
         this.bubblesGrid.innerHTML = '';
-        
+
         this.riddlesData.forEach(riddle => {
             const bubble = this.createBubble(riddle);
             this.bubblesGrid.appendChild(bubble);
@@ -120,7 +120,7 @@ class RiddleTeaser {
         bubble.dataset.number = riddle.number;
 
         const formattedDate = this.formatDate(riddle.date);
-        
+
         bubble.innerHTML = `
             <div class="bubble-circle">
                 <span class="bubble-content">${riddle.revealed ? riddle.number : ''}</span>
@@ -145,21 +145,21 @@ class RiddleTeaser {
     selectRiddle(riddle, bubbleElement) {
         // Remove active class from all bubbles
         document.querySelectorAll('.bubble').forEach(b => b.classList.remove('active'));
-        
+
         // Add active class to selected bubble
         bubbleElement.classList.add('active');
-        
+
         // Store current riddle
         this.currentRiddle = riddle;
-        
+
         // Update URL with riddle parameter (without page reload)
         const url = new URL(window.location);
         url.searchParams.set('riddle', riddle.number);
         window.history.pushState({}, '', url);
-        
+
         // Display riddle
         this.displayRiddle(riddle);
-        
+
         // Enable input and button
         this.answerInput.disabled = false;
         this.answerInput.value = '';
@@ -172,10 +172,10 @@ class RiddleTeaser {
         // Find all revealed riddles
         const revealedRiddles = this.riddlesData.filter(r => r.revealed);
         if (revealedRiddles.length === 0) return;
-        
+
         // Select the LAST revealed riddle (most recent) to show as active
         const lastRevealedRiddle = revealedRiddles[revealedRiddles.length - 1];
-        
+
         // Find the corresponding bubble element
         const bubble = document.querySelector(`.bubble[data-number="${lastRevealedRiddle.number}"]`);
         if (bubble) {
@@ -185,12 +185,12 @@ class RiddleTeaser {
 
     displayRiddle(riddle) {
         const content = this.riddleContent[riddle.number];
-        
+
         if (!content) {
             console.error(`No content found for riddle ${riddle.number}`);
             return;
         }
-        
+
         this.riddleDisplay.innerHTML = `
             <div class="riddle-content">
                 <h2>${content.title}</h2>
@@ -218,12 +218,9 @@ class RiddleTeaser {
         wrapper.appendChild(overlay);
 
         const mistakes = [
-            { x: 251, y: 5, w: 18, h: 11 },
-            { x: 251, y: 22, w: 18, h: 13 },
-            { x: 2, y: 5, w: 20, h: 11 },
-            { x: 2, y: 14, w: 20, h: 19 },
-            { x: 44, y: 17, w: 22, h: 20 },
-            { x: 28, y: 17, w: 18, h: 20 },
+            { x: 251, y: 5, w: 18, h: 30 },
+            { x: 2, y: 5, w: 20, h: 28 },
+            { x: 28, y: 17, w: 38, h: 20 },
             { x: 66, y: 0, w: 22, h: 11 },
         ];
 
@@ -255,13 +252,15 @@ class RiddleTeaser {
                 if (vbX >= m.x && vbX <= m.x + m.w && gY >= m.y && gY <= m.y + m.h) {
                     if (!found.has(i)) {
                         found.add(i);
-                        const circle = document.createElement('div');
-                        circle.className = 'mistake-dot';
-                        circle.style.left = ((vbX - vb.minX) * scale + offsetX) + 'px';
-                        circle.style.top = ((vbY - vb.minY) * scale + offsetY) + 'px';
-                        overlay.appendChild(circle);
+                        const zone = document.createElement('div');
+                        zone.className = 'mistake-zone';
+                        zone.style.left = ((m.x - vb.minX) * scale + offsetX) + 'px';
+                        zone.style.top = ((m.y + 18 - vb.minY) * scale + offsetY) + 'px';
+                        zone.style.width = (m.w * scale) + 'px';
+                        zone.style.height = (m.h * scale) + 'px';
+                        overlay.appendChild(zone);
                         if (found.size === mistakes.length) {
-                            this.riddleDisplay.querySelector('h2').textContent = 'Guess the dance #3';
+                            this.riddleDisplay.querySelector('h2').textContent = 'Guess the dance name';
                         }
                     }
                     break;
@@ -274,7 +273,7 @@ class RiddleTeaser {
 
     setupEventListeners() {
         this.checkButton.addEventListener('click', () => this.checkAnswer());
-        
+
         this.answerInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') {
                 if (this.selectedIndex >= 0 && this.autocompleteDropdown.classList.contains('show')) {
@@ -330,7 +329,7 @@ class RiddleTeaser {
         }
 
         const matches = this.filterDances(searchTerm);
-        
+
         if (matches.length === 0) {
             this.hideAutocomplete();
             return;
@@ -341,11 +340,11 @@ class RiddleTeaser {
 
     filterDances(searchTerm) {
         const lowerSearch = searchTerm.toLowerCase();
-        
+
         return this.allDances.filter(dance => {
             const lowerDance = dance.toLowerCase();
             const words = lowerDance.split(/\s+/);
-            
+
             // Check if search term matches the start of any word in the dance name
             return words.some(word => word.startsWith(lowerSearch)) ||
                    lowerDance.includes(lowerSearch);
@@ -355,7 +354,7 @@ class RiddleTeaser {
             const bWords = b.toLowerCase().split(/\s+/);
             const aStartsWithWord = aWords.some(word => word.startsWith(lowerSearch));
             const bStartsWithWord = bWords.some(word => word.startsWith(lowerSearch));
-            
+
             if (aStartsWithWord && !bStartsWithWord) return -1;
             if (!aStartsWithWord && bStartsWithWord) return 1;
             return a.localeCompare(b);
@@ -370,7 +369,7 @@ class RiddleTeaser {
             const item = document.createElement('div');
             item.className = 'autocomplete-item';
             item.textContent = dance;
-            
+
             item.addEventListener('click', () => {
                 this.answerInput.value = dance;
                 this.hideAutocomplete();
@@ -417,7 +416,7 @@ class RiddleTeaser {
         }
 
         const userAnswer = this.answerInput.value.trim().toLowerCase();
-        
+
         if (!userAnswer) {
             return;
         }
@@ -451,7 +450,7 @@ class RiddleTeaser {
         } else {
             feedback.textContent = '❌ Not quite right. Try again!';
         }
-        
+
         this.riddleDisplay.querySelector('.riddle-content').appendChild(feedback);
 
         if (isCorrect) {
