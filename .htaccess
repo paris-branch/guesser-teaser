@@ -1,0 +1,58 @@
+Options -Indexes -MultiViews
+ServerSignature Off
+
+RewriteEngine On
+
+#BEGIN Rewrite HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+#END Rewrite HTTP to HTTPS
+
+# ----- Block empty User-Agent (most common probe) -----
+RewriteCond %{HTTP_USER_AGENT} ^$ [OR]
+RewriteCond %{HTTP_USER_AGENT} ^-?$
+RewriteRule ^ - [F,L]
+
+# ----- Block bad bots / scanners -----
+RewriteCond %{HTTP_USER_AGENT} (?i)(curl|wget|python-requests|go-http-client|java|libwww|perl|php|nikto|sqlmap|nmap|masscan|zgrab|acunetix|nessus|openvas|gobuster|dirbuster|wfuzz|burpcollaborator|gptbot|ccbot|imagesift|diffbot|semrush|zoominfo|petalbot|claudebot) [OR]
+RewriteCond %{HTTP_USER_AGENT} (?i)(scrapy|httpclient|apache-http|httpx|httrack|winhttp|ruby|mechanize|spider|scanner|crawler|extractor) [OR]
+RewriteCond %{HTTP_USER_AGENT} (?i)(dataforseo|majestic|archive\.org|bingpreview|facebookexternalhit|slack-imgproxy|whatsapp)
+RewriteRule ^ - [F,L]
+
+# ----- Restrict HTTP methods -----
+RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|OPTIONS)$
+RewriteRule ^ - [F,L]
+
+# ----- Security headers -----
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "no-referrer"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    #Header always set Content-Security-Policy "default-src 'self'; connect-src 'self' https://api.ipify.org https://api.jsonbin.io; img-src 'self' data:; script-src 'self'; style-src 'self'"
+</IfModule>
+
+# ----- Cache control -----
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(css|js|png|svg)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
+
+# ----- Deny access to dotfiles -----
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>

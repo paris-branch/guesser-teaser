@@ -482,6 +482,85 @@ body {
 }
 
 // ==========================================
+// POP-IN OVERLAY
+// ==========================================
+.popin-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.popin-content {
+    background-color: $bg-dark-blue;
+    border: 2px solid $accent-blue;
+    border-radius: 12px;
+    padding: 50px 40px 40px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.popin-message {
+    font-size: 24px;
+    font-weight: 600;
+    color: $success-green;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.popin-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: $light-grey;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $white;
+    }
+}
+
+.popin-share-button {
+    background-color: $coral-accent;
+    color: $white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: darken($coral-accent, 10%);
+    }
+
+    &.copied {
+        background-color: $success-green;
+    }
+}
+
+// ==========================================
 // RESPONSIVE DESIGN
 // ==========================================
 @media (max-width: 768px) {
@@ -556,6 +635,15 @@ body {
     .feedback-message {
         font-size: 20px;
     }
+}
+
+.site-footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px;
+    font-size: 12px;
+    color: $light-grey;
+    opacity: 0.6;
 }
 
 @media (max-width: 480px) {

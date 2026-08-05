@@ -9,6 +9,10 @@ class RiddleTeaser {
         this.answerInput = document.getElementById('answer-input');
         this.checkButton = document.getElementById('check-button');
         this.autocompleteDropdown = document.getElementById('autocomplete-dropdown');
+        this.popinOverlay = document.getElementById('popin-overlay');
+        this.popinMessage = document.getElementById('popin-message');
+        this.popinShareButton = document.getElementById('popin-share-button');
+        this.popinClose = document.getElementById('popin-close');
         this.allDances = allAnswerSuggestions;
         this.selectedIndex = -1;
         this.riddleContent = this.loadRiddleContent();
@@ -320,6 +324,40 @@ class RiddleTeaser {
                 this.hideAutocomplete();
             }
         });
+
+        this.popinClose.addEventListener('click', () => this.closePopin());
+
+        this.popinOverlay.addEventListener('click', (e) => {
+            if (e.target === this.popinOverlay) {
+                this.closePopin();
+            }
+        });
+
+        this.popinShareButton.addEventListener('click', () => this.shareResult());
+    }
+
+    closePopin() {
+        this.popinOverlay.classList.remove('visible');
+        this.answerInput.value = '';
+        this.answerInput.classList.remove('correct');
+    }
+
+    shareResult() {
+        const shareText = "I found this week's dance, can you? http://play.rscdsparis.fr";
+        navigator.clipboard.writeText(shareText).then(() => {
+            const originalText = this.popinShareButton.textContent;
+            this.popinShareButton.textContent = 'Copied to clipboard!';
+            this.popinShareButton.classList.add('copied');
+            setTimeout(() => {
+                this.popinShareButton.textContent = originalText;
+                this.popinShareButton.classList.remove('copied');
+            }, 2000);
+        }).catch(() => {
+            this.popinShareButton.textContent = 'Failed to copy';
+            setTimeout(() => {
+                this.popinShareButton.textContent = 'Share';
+            }, 2000);
+        });
     }
 
     updateAutocomplete(searchTerm) {
@@ -439,30 +477,25 @@ class RiddleTeaser {
             existingFeedback.remove();
         }
 
-        // Add new feedback message
-        const feedback = document.createElement('div');
-        feedback.className = `feedback-message ${isCorrect ? 'success' : 'error'}`;
-
         if (isCorrect) {
             const { program, position } = this.currentRiddle;
             const suffix = position === 1 ? 'st' : position === 2 ? 'nd' : position === 3 ? 'rd' : 'th';
-            feedback.textContent = `🎉 Correct! Find this dance ${position}${suffix} on the ${program} program!`;
-        } else {
-            feedback.textContent = '❌ Not quite right. Try again!';
-        }
+            this.popinMessage.textContent = `🎉 Correct! Find this dance ${position}${suffix} on the ${program} program!`;
 
-        this.riddleDisplay.querySelector('.riddle-content').appendChild(feedback);
-
-        if (isCorrect) {
             this.saveSolvedRiddle(this.currentRiddle.number);
+            window.tracker?.trackSubmission(this.currentRiddle.number);
             const bubble = document.querySelector(`.bubble[data-number="${this.currentRiddle.number}"]`);
             if (bubble) {
                 bubble.classList.add('solved');
             }
-            setTimeout(() => {
-                this.answerInput.value = '';
-                this.answerInput.classList.remove('correct');
-            }, 3000);
+
+            this.popinOverlay.classList.add('visible');
+        } else {
+            const feedback = document.createElement('div');
+            feedback.className = 'feedback-message error';
+            feedback.textContent = '❌ Not quite right. Try again!';
+
+            this.riddleDisplay.querySelector('.riddle-content').appendChild(feedback);
         }
     }
 }
