@@ -39,33 +39,41 @@ const riddlesData = [
     {
         number: 5,
         date: '2026-08-17',
+        answers: ["Rougemont Castle"],
+        program: 'Friday',
+        position: 6,
+        revealed: false
+    },
+    {
+        number: 6,
+        date: '2026-08-24',
+        answers: ["Let's Have Music and Dance"],
+        program: 'Saturday',
+        position: 12,
+        revealed: false
+    },
+    {
+        number: 7,
+        date: '2026-08-31',
+        answers: ["Quarries' Jig"],
+        program: 'Saturday',
+        position: 15,
+        revealed: false
+    },
+    {
+        number: 8,
+        date: '2026-09-07',
         answers: ["General Stuart's Reel"],
         program: 'Friday',
         position: 7,
         revealed: false
     },
     {
-        number: 6,
-        date: '2026-08-24',
-        answers: [""],
-        revealed: false
-    },
-    {
-        number: 7,
-        date: '2026-08-31',
-        answers: [""],
-        revealed: false
-    },
-    {
-        number: 8,
-        date: '2026-09-07',
-        answers: [""],
-        revealed: false
-    },
-    {
         number: 9,
         date: '2026-09-14',
-        answers: [""],
+        answers: ["Ysobel Stewart of Fish Hoek"],
+        program: 'Friday',
+        position: 10,
         revealed: false
     },
     {

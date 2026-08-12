@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+       LET'S HAVE MUSIC AND DANCE
+       8x32 R                        
+       Susan MacKay                                                                                                                                                                               
+       Dancedata ID:  20771 
+
+
+       SVG crib 6196  created by Keith Rose  11.05.23   15:30:35           Prog V 249 
+       keith@krose.plus.com
+-->
+
+<svg
+   viewBox="-1 -1  272  118.73"
+   version="1.1"
+   id="svg111"
+   sodipodi:docname="saturday13.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs111" />
+  <sodipodi:namedview
+     id="namedview111"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.7365756"
+     inkscape:cx="106.61711"
+     inkscape:cy="40.430053"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g111" />
+  <title
+     id="title1">   LET'S HAVE MUSIC AND DANCE    -    8x32 R                           </title>
+  <g
+     stroke="black"
+     stroke-width=".4"
+     font-family="Helvetica"
+     fill="black"
+     transform="translate(0, 18 )"
+     id="g111">
+    <rect
+       x="0.00"
+       y="-18.00"
+       width="270"
+       height="116.73"
+       stroke="none"
+       fill="white"
+       id="rect1" />
+    <rect
+       x="0.00"
+       y="-18.00"
+       width="270"
+       height="18"
+       fill="white"
+       id="rect2" />
+    <text
+       x="5"
+       y="-5"
+       font-size="10px"
+       stroke-width="0.001"
+       font-weight="bold"
+       id="text2" />
+    <text
+       x="197.09"
+       y="-5.00"
+       font-size="6.5"
+       stroke-width="0.001"
+       text-anchor="middle"
+       id="text3" />
+    <text
+       x="265"
+       y="-5"
+       font-size="10px"
+       font-weight="bold"
+       stroke-width="0.001"
+       text-anchor="end"
+       id="text4" />
+    <rect
+       x="0"
+       y="0"
+       width="270"
+       height="45"
+       fill="white"
+       id="rect4" />
+    <rect
+       x="0"
+       y="45"
+       width="270"
+       height="45"
+       fill="white"
+       id="rect5" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="11.25,62.10 11.25,75.60 "
+       id="polyline5" />
+    <path
+       fill="none"
+       style="stroke-dasharray: 3, 2;"
+       stroke="rgb(0,0,0)"
+       d="M 27.00 0.00  L 27.00 45.00"
+       id="path9" />
+    <path
+       fill="none"
+       style="stroke-dasharray: 2, 1.2;"
+       stroke="rgb(0,0,0)"
+       d="M 47.70 33.75   C 36.90 48.15 23.40 32.85 43.65 15.75 "
+       id="path11" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 47.70 11.25   C 58.50 -3.15 72.00 12.15 51.75 29.25 "
+       id="path14" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 67.50 0.00  L 67.50 45.00"
+       id="path15" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="193.50,22.50 189.00,26.10 182.25,22.50 180.00,22.50 184.50,26.10 191.25,22.50 193.50,22.50 189.00,26.10 182.25,22.50 180.00,22.50 "
+       id="polyline15" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="139.50,22.50 144.00,18.90 150.75,22.50 153.00,22.50 148.50,18.90 141.75,22.50 139.50,22.50 144.00,18.90 150.75,22.50 153.00,22.50 "
+       id="polyline16" />
+    <text
+       style="fill:rgb(0,0,0)"
+       x="92.00"
+       y="25.80"
+       font-size="5"
+       stroke-width="0.001"
+       id="text18">3</text>
+    <line
+       stroke="rgb(0,0,0)"
+       x1="92.00"
+       y1="26.80"
+       x2="94.25"
+       y2="26.80"
+       id="line18" />
+    <text
+       style="fill:rgb(0,0,0)"
+       x="92.00"
+       y="31.80"
+       font-size="5"
+       stroke-width="0.001"
+       id="text19">4</text>
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="139.50"
+       y1="22.50"
+       x2="139.50"
+       y2="17.10"
+       id="line19" />
+    <circle
+       cx="139.50"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle19" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="153.00"
+       y1="22.50"
+       x2="153.00"
+       y2="17.10"
+       id="line20" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="149.63,19.12 149.62,25.87 156.37,25.88 156.38,19.13 "
+       id="polygon20" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="193.50"
+       y1="22.50"
+       x2="193.50"
+       y2="27.90"
+       id="line21" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="196.87,25.88 196.88,19.13 190.13,19.12 190.12,25.87 "
+       id="polygon21" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="180.00"
+       y1="22.50"
+       x2="180.00"
+       y2="27.90"
+       id="line22" />
+    <circle
+       cx="180.00"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle22" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="162.00,22.50 171.00,22.50 "
+       id="polyline23" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="162.00"
+       y1="22.50"
+       x2="162.00"
+       y2="27.90"
+       id="line23" />
+    <circle
+       cx="162.00"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle23" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="171.00"
+       y1="22.50"
+       x2="171.00"
+       y2="17.10"
+       id="line24" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="167.63,19.12 167.62,25.87 174.37,25.88 174.38,19.13 "
+       id="polygon24" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="220.50,22.50 229.50,22.50 "
+       id="polyline29" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="229.50"
+       y1="22.50"
+       x2="229.50"
+       y2="27.90"
+       id="line29" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="232.87,25.88 232.88,19.13 226.13,19.12 226.12,25.87 "
+       id="polygon29" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="220.50"
+       y1="22.50"
+       x2="220.50"
+       y2="17.10"
+       id="line30" />
+    <circle
+       cx="220.50"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle30" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="240.75,22.50 249.75,22.50 "
+       id="polyline31" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="249.75"
+       y1="22.50"
+       x2="249.75"
+       y2="27.90"
+       id="line31" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="253.12,25.88 253.13,19.13 246.38,19.12 246.37,25.87 "
+       id="polygon31" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="240.75"
+       y1="22.50"
+       x2="240.75"
+       y2="17.10"
+       id="line32" />
+    <circle
+       cx="240.75"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle32" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 185.839  12.530  l -0.778  0.962 -2.278 -0.965  2.703  2.663  1.132 -3.621 -0.778  0.962 "
+       id="path41" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 146.70 17.55   C 150.30 -4.05 184.50 0.90 185.40 14.85 "
+       id="path42" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 147.062  31.844  l  0.988 -0.744  1.976  1.489 -1.976 -3.239 -1.976  3.239  0.988 -0.744 "
+       id="path43" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 186.75 27.00   C 184.50 50.40 147.15 43.65 148.05 29.70 "
+       id="path44" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="87.75"
+       y1="11.25"
+       x2="87.75"
+       y2="16.65"
+       id="line44" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="91.12,14.63 91.13,7.88 84.38,7.87 84.37,14.62 "
+       id="polygon44" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="87.75"
+       y1="36.00"
+       x2="87.75"
+       y2="30.60"
+       id="line45" />
+    <circle
+       cx="87.75"
+       cy="36.00"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle45" />
+    <text
+       style="fill:rgb(0,0,0)"
+       x="119.00"
+       y="25.80"
+       font-size="5"
+       stroke-width="0.001"
+       id="text48">3</text>
+    <line
+       stroke="rgb(0,0,0)"
+       x1="119.00"
+       y1="26.80"
+       x2="121.25"
+       y2="26.80"
+       id="line48" />
+    <text
+       style="fill:rgb(0,0,0)"
+       x="119.00"
+       y="31.80"
+       font-size="5"
+       stroke-width="0.001"
+       id="text49">4</text>
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="112.50"
+       y1="11.25"
+       x2="112.50"
+       y2="16.65"
+       id="line49" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="115.87,14.63 115.88,7.88 109.13,7.87 109.12,14.62 "
+       id="polygon49" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="112.50"
+       y1="36.00"
+       x2="112.50"
+       y2="30.60"
+       id="line50" />
+    <circle
+       cx="112.50"
+       cy="36.00"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle50" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 101.25 31.95   C 101.25 40.95 91.35 43.65 84.15 41.40 "
+       id="path51" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M  73.262  25.094  l  0.988 -0.744  1.976  1.489 -1.976 -3.239 -1.976  3.239  0.988 -0.744 "
+       id="path52" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 84.15 41.40   C 76.95 39.15 73.35 31.95 74.25 22.95 "
+       id="path53" />
+    <circle
+       cx="101.25"
+       cy="31.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle53" />
+    <path
+       fill="none"
+       style="stroke-dasharray: 2, 1.2;"
+       stroke="rgb(0,0,0)"
+       d="M 101.25 13.95   C 101.25 5.40 116.10 4.05 120.15 6.75 "
+       id="path54" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="104.63,10.13 97.88,10.12 97.87,16.87 104.62,16.88 "
+       id="polygon54" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 127.438  18.556  l -0.988  0.744 -1.976 -1.489  1.976  3.239  1.976 -3.239 -0.988  0.744 "
+       id="path55" />
+    <path
+       fill="none"
+       style="stroke-dasharray: 2, 1.2;"
+       stroke="rgb(0,0,0)"
+       d="M 120.15 6.75   C 124.20 9.45 126.45 13.50 126.45 20.70 "
+       id="path56" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 236.775  37.010  l  0.551 -1.108  2.433  0.448 -3.216 -2.013 -0.319  3.781  0.551 -1.108 "
+       id="path57" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 261.00 22.50   C 262.35 36.45 239.85 45.45 236.70 34.65 "
+       id="path58" />
+    <circle
+       cx="261.00"
+       cy="22.50"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle58" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 233.475   7.990  l -0.551  1.108 -2.433 -0.448  3.216  2.013  0.319 -3.781 -0.551  1.108 "
+       id="path60" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 209.25 22.50   C 207.90 8.55 230.40 -0.45 233.55 10.35 "
+       id="path61" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="212.63,19.13 205.88,19.12 205.87,25.87 212.62,25.88 "
+       id="polygon61" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="11.25"
+       y1="72.90"
+       x2="16.65"
+       y2="72.90"
+       id="line61" />
+    <circle
+       cx="11.25"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle61" />
+    <text
+       xml:space="preserve"
+       x="11.05"
+       y="75.40"
+       stroke="rgb(0,0,0)"
+       fill="rgb(0,0,0)"
+       font-size="6.5"
+       stroke-width="0.001"
+       text-anchor="middle"
+       id="text62">3</text>
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="11.25"
+       y1="72.90"
+       x2="16.65"
+       y2="72.90"
+       id="line62" />
+    <circle
+       cx="11.25"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle62" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="11.25"
+       y1="62.10"
+       x2="16.65"
+       y2="62.10"
+       id="line63" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="14.63,58.73 7.88,58.72 7.87,65.47 14.62,65.48 "
+       id="polygon63" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="22.50,62.10 22.50,75.60 "
+       id="polyline64" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="22.50"
+       y1="72.90"
+       x2="27.90"
+       y2="72.90"
+       id="line64" />
+    <circle
+       cx="22.50"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle64" />
+    <text
+       xml:space="preserve"
+       x="22.30"
+       y="75.40"
+       stroke="rgb(0,0,0)"
+       fill="rgb(0,0,0)"
+       font-size="6.5"
+       stroke-width="0.001"
+       text-anchor="middle"
+       id="text65">1</text>
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="22.50"
+       y1="72.90"
+       x2="27.90"
+       y2="72.90"
+       id="line65" />
+    <circle
+       cx="22.50"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle65" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="22.50"
+       y1="62.10"
+       x2="27.90"
+       y2="62.10"
+       id="line66" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="25.88,58.73 19.13,58.72 19.12,65.47 25.87,65.48 "
+       id="polygon66" />
+    <polyline
+       fill="none"
+       stroke-width="0.70"
+       stroke="rgb(0,0,0)"
+       points="33.75,62.10 33.75,75.60 "
+       id="polyline67" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="33.75"
+       y1="72.90"
+       x2="39.15"
+       y2="72.90"
+       id="line67" />
+    <circle
+       cx="33.75"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle67" />
+    <text
+       xml:space="preserve"
+       x="33.55"
+       y="75.40"
+       stroke="rgb(0,0,0)"
+       fill="rgb(0,0,0)"
+       font-size="6.5"
+       stroke-width="0.001"
+       text-anchor="middle"
+       id="text68">2</text>
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="33.75"
+       y1="72.90"
+       x2="39.15"
+       y2="72.90"
+       id="line68" />
+    <circle
+       cx="33.75"
+       cy="72.90"
+       r="3.5"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle68" />
+    <line
+       stroke-width=".7"
+       stroke="rgb(0,0,0)"
+       x1="33.75"
+       y1="62.10"
+       x2="39.15"
+       y2="62.10"
+       id="line69" />
+    <polygon
+       fill="white"
+       stroke="rgb(0,0,0)"
+       points="37.13,58.73 30.38,58.72 30.37,65.47 37.12,65.48 "
+       id="polygon69" />
+    <polyline
+       fill="none"
+       stroke="rgb(0,0,0)"
+       points="47.25,67.50 58.50,67.50 "
+       id="polyline70" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M  56.356  66.512  l  0.744  0.988 -1.489  1.976  3.239 -1.976 -3.239 -1.976  0.744  0.988 "
+       id="path70" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M  66.944  57.688  l -0.744 -0.988  1.489 -1.976 -3.239  1.976  3.239  1.976 -0.744 -0.988 "
+       id="path71" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 65.25 69.30   C 77.85 69.30 77.40 56.70 64.80 56.70 "
+       id="path72" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M  67.096  76.148  l -0.924 -0.823  1.072 -2.230 -2.788  2.573  3.563  1.303 -0.924 -0.823 "
+       id="path73" />
+    <path
+       fill="none"
+       style="stroke-dasharray: 2, 1.2;"
+       stroke="rgb(0,0,0)"
+       d="M 65.25 63.00   C 73.35 62.55 73.35 75.60 64.80 75.60 "
+       id="path74" />
+    <text
+       x="60.57"
+       y="83.25"
+       font-size="5"
+       stroke-width="0.001"
+       style="fill:rgb(0,0,0)"
+       id="text74">W under</text>
+    <text
+       x="61.10"
+       y="88.65"
+       font-size="5"
+       stroke-width="0.001"
+       style="fill:rgb(0,0,0)"
+       id="text75">M's arm</text>
+    <polyline
+       fill="none"
+       stroke="rgb(0,0,0)"
+       points="90.00,67.50 78.75,67.50 "
+       id="polyline75" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M  80.894  68.488  l -0.744 -0.988  1.489 -1.976 -3.239  1.976  3.239  1.976 -0.744 -0.988 "
+       id="path75" />
+    <path
+       fill="none"
+       stroke="rgb(0,0,0)"
+       d="M 150.75 45.00  L 150.75 90.00"
+       id="path76" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="47.25"
+       y1="56.25"
+       x2="47.25"
+       y2="54.45"
+       id="line76" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="47.25"
+       y1="54.45"
+       x2="90.00"
+       y2="54.45"
+       id="line77" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="90.00"
+       y1="54.45"
+       x2="90.00"
+       y2="56.25"
+       id="line78" />
+    <text
+       x="115.90"
+       y="72.00"
+       font-size="10"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text80">S</text>
+    <polyline
+       fill="none"
+       stroke="rgb(0,0,0)"
+       points="124.65,74.25 124.65,67.50 "
+       id="polyline80" />
+    <path
+       stroke-width="0.001"
+       fill="rgb(0,0,0)"
+       d="M 123.662  69.644  l  0.988 -0.744  1.976  1.489 -1.976 -3.239 -1.976  3.239  0.988 -0.744 "
+       id="path80" />
+    <text
+       x="102.40"
+       y="72.00"
+       font-size="10"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text83">S</text>
+    <text
+       x="133.90"
+       y="72.00"
+       font-size="10"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text84">S</text>
+    <line
+       stroke="rgb(0,0,0)"
+       x1="101.25"
+       y1="49.05"
+       x2="103.05"
+       y2="47.25"
+       id="line86" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="103.05"
+       y1="47.25"
+       x2="119.70"
+       y2="47.25"
+       id="line87" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="119.70"
+       y1="47.25"
+       x2="121.50"
+       y2="45.45"
+       id="line88" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="141.75"
+       y1="49.05"
+       x2="139.95"
+       y2="47.25"
+       id="line89" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="139.95"
+       y1="47.25"
+       x2="123.30"
+       y2="47.25"
+       id="line90" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="123.30"
+       y1="47.25"
+       x2="121.50"
+       y2="45.45"
+       id="line91" />
+    <circle
+       cx="182.25"
+       cy="75.15"
+       r="6.75"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle97" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="175.50"
+       y1="75.15"
+       x2="175.50"
+       y2="81.90"
+       id="line98" />
+    <text
+       x="180.15"
+       y="77.85"
+       font-size="7.5"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text98">3</text>
+    <circle
+       cx="225.00"
+       cy="69.75"
+       r="6.75"
+       fill="white"
+       stroke="rgb(0,0,0)"
+       id="circle105" />
+    <line
+       stroke="rgb(0,0,0)"
+       x1="218.25"
+       y1="69.75"
+       x2="218.25"
+       y2="76.50"
+       id="line105" />
+    <text
+       x="222.90"
+       y="72.45"
+       font-size="7.5"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text106">6</text>
+    <line
+       stroke="rgb(0,0,0)"
+       x1="215.55"
+       y1="69.75"
+       x2="234.45"
+       y2="69.75"
+       id="line106" />
+    <text
+       x="250.90"
+       y="72.00"
+       font-size="10"
+       stroke-width="0.001"
+       font-weight="bold"
+       style="fill:rgb(0,0,0)"
+       id="text108">S</text>
+  </g>
+</svg>
