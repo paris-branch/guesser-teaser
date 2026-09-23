@@ -79,19 +79,25 @@ const riddlesData = [
     {
         number: 10,
         date: '2026-09-21',
-        answers: [""],
+        answers: ["The Kissing Bridge"],
+        program: 'Saturday',
+        position: 5,
         revealed: false
     },
     {
         number: 11,
         date: '2026-09-28',
-        answers: [""],
+        answers: ["Mairi's Wedding"],
+        program: 'Saturday',
+        position: 16,
         revealed: false
     },
     {
         number: 12,
         date: '2026-10-05',
-        answers: [""],
+        answers: ["General Stuart's Reel"],
+        program: 'Friday',
+        position: 7,
         revealed: false
     }
 ];
@@ -118,7 +124,7 @@ const allAnswerSuggestions = [
     "Salute to Glasgow",
     "Sibylle's Mother",
     "Sueno's Stone",
-    "Summer Wooing",
+    "The Kissing Bridge",
     "Thank You Patricia",
     "The Compleat Gardener",
     "The Duke and Duchess of Edinburgh",
